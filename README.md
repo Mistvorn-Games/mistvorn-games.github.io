@@ -9,15 +9,25 @@ processing). Served via GitHub Pages from the `main` branch.
 
 ## Structure
 
-- `index.html` — landing page, links out to each game's docs
-- `standfast/` — docs for Stand Fast: Survival Arena
+- `index.html` — landing page, links out to each game's folder
+- `standfast/` — Stand Fast: Survival Arena's page + docs
+  - `index.html` — game landing page, links to its docs
+  - `privacy-policy.html`, `terms.html`
 - `assets/style.css` — shared stylesheet (light/dark aware)
 - `CNAME` — custom domain config for GitHub Pages (`mistvorn.games`)
 
-## Adding a new game's docs
+## Adding a new game
 
-Create a new folder (e.g. `some-game/`), add its `privacy-policy.html` /
-`terms.html`, and link to them from `index.html`.
+Each game gets its own folder, named with the last segment of its package
+name (e.g. package `games.mistvorn.foo` → folder `foo/`), so the URL is
+guessable from the package name. Inside it:
+
+- `index.html` — game landing page, links to that game's docs (copy
+  `standfast/index.html` as a starting point)
+- `privacy-policy.html`, `terms.html` — same filenames every time, so the
+  pattern stays `mistvorn.games/<slug>/privacy-policy.html`
+
+Then add one entry linking to `/<slug>/` from the root `index.html`.
 
 ## Custom domain
 
