@@ -185,10 +185,13 @@ img.icon {
 .game-title h1 { margin: 0; }
 .game-title .eyebrow { margin: 0.15rem 0 0; }
 
-a.card.game {
+.card.game {
   display: block;
   padding: 0;
   overflow: hidden;
+}
+
+a.card.game {
   color: inherit;
   text-decoration: none;
   transition: border-color 0.15s, transform 0.15s;
@@ -211,7 +214,8 @@ a.card.game img.banner {
   padding: 1rem 1.25rem;
 }
 
-.game-info h3 { margin: 0; color: var(--link); }
+.game-info h3 { margin: 0; }
+a.card.game .game-info h3 { color: var(--link); }
 .game-info p { margin: 0.1rem 0 0; color: var(--text-muted); font-size: 0.95rem; }
 
 .store {
