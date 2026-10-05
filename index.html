@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mistvorn Games</title>
 <meta name="description" content="Mistvorn Games — indie game developer.">
+<meta property="og:title" content="Mistvorn Games">
+<meta property="og:description" content="Mistvorn Games — indie game developer.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mistvorn.games/">
+<meta property="og:image" content="https://mistvorn.games/assets/img/mistvorn-logo.png">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -13,24 +18,34 @@
 <body>
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="/">Mistvorn Games</a>
+    <a class="brand" href="/"><img src="/favicon.svg" alt="" width="28" height="28">Mistvorn Games</a>
     <nav>
       <a href="mailto:contact@mistvorn.games">Contact</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
-  <h1>Mistvorn Games</h1>
-  <p class="eyebrow">Indie game development.</p>
+<section class="hero">
+  <h1><img src="/assets/img/mistvorn-logo.png" alt="Mistvorn Games" width="580" height="520"></h1>
+  <p>Indie game development.</p>
+</section>
 
+<main class="wrap">
   <p>This site hosts privacy policies, terms of service, and other support
   documentation for games published by Mistvorn Games.</p>
 
-  <div class="card">
-    <h3><a href="/standfast/">Stand Fast: Survival Arena</a></h3>
-    <p>Endless 2D survival arena, for Android.</p>
-  </div>
+  <h2>Games</h2>
+
+  <a class="card game" href="/standfast/">
+    <img class="banner" src="/standfast/img/banner.webp" alt="" width="1024" height="500">
+    <div class="game-info">
+      <img class="icon" src="/standfast/img/icon.png" alt="" width="56" height="56">
+      <div>
+        <h3>Stand Fast: Survival Arena</h3>
+        <p>Endless 2D survival arena, for Android.</p>
+      </div>
+    </div>
+  </a>
 
   <footer class="site">
     <p>&copy; 2026 Mistvorn Games. Questions? <a href="mailto:contact@mistvorn.games">contact@mistvorn.games</a></p>

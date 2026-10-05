@@ -13,7 +13,10 @@ processing). Served via GitHub Pages from the `main` branch.
 - `standfast/` — Stand Fast: Survival Arena's page + docs
   - `index.html` — game landing page, links to its docs
   - `privacy-policy.html`, `terms.html`
+  - `img/` — banner (`banner.webp` for the page, `banner.png` for social
+    previews) and app icon
 - `assets/style.css` — shared stylesheet (light/dark aware)
+- `assets/img/` — studio logo used in the home page hero
 - `CNAME` — custom domain config for GitHub Pages (`mistvorn.games`)
 
 ## Adding a new game
@@ -28,6 +31,12 @@ guessable from the package name. Inside it:
   pattern stays `mistvorn.games/<slug>/privacy-policy.html`
 
 Then add one entry linking to `/<slug>/` from the root `index.html`.
+
+## Local preview
+
+Run `./serve.sh` (optionally `./serve.sh <port>`) and open
+<http://localhost:8000/>. Caching is disabled, so a reload always shows the
+latest edits.
 
 ## Custom domain
 
