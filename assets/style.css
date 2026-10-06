@@ -341,3 +341,42 @@ a.card.post-card:hover {
 }
 
 .post-nav .next { margin-left: auto; text-align: right; }
+
+/* Social links: icons are masks so they take the link's text colour. */
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.social:hover { color: var(--link); }
+
+.social::before {
+  content: "";
+  width: 1.2em;
+  height: 1.2em;
+  background: currentColor;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) center / contain no-repeat;
+}
+
+.social.reddit { --icon: url("/assets/img/reddit.svg"); }
+.social.instagram { --icon: url("/assets/img/instagram.svg"); }
+
+.hero .socials {
+  justify-content: center;
+  margin-top: 1.25rem;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+}
+
+.hero .social { color: inherit; }
+.hero .social:hover { color: #ffffff; }
