@@ -1,0 +1,26 @@
+title: Mistvorn Games
+description: Mistvorn Games — indie game developer.
+url: https://mistvorn.games
+timezone: Australia/Sydney
+
+# Devlog posts live in _posts/ and are published under /devlog/.
+permalink: /devlog/:title/
+
+defaults:
+  - scope:
+      type: posts
+    values:
+      layout: post
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: /devlog/feed.xml
+
+exclude:
+  - README.md
+  - serve.sh
+  - Gemfile
+  - Gemfile.lock
+  - vendor

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- assign description = page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 %}
+<title>{{ page.title }} — {{ site.title }}</title>
+<meta name="description" content="{{ description | escape }}">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ description | escape }}">
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ page.image | default: '/assets/img/mistvorn-logo.png' | absolute_url }}">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/style.css">
+{% feed_meta %}
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/favicon.svg" alt="" width="28" height="28">Mistvorn Games</a>
+    <nav>
+      <a href="/devlog/">Devlog</a>
+      <a href="mailto:contact@mistvorn.games">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+{{ content }}
+
+  <footer class="site">
+    <p>&copy; 2026 Mistvorn Games. Questions? <a href="mailto:contact@mistvorn.games">contact@mistvorn.games</a></p>
+  </footer>
+</main>
+</body>
+</html>

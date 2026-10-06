@@ -1,0 +1,4 @@
+# Projects a devlog post can belong to (set `project: <slug>` in the post's
+# front matter). Each one also needs a page in devlog/project/<slug>.html.
+- slug: dungeon-crawler
+  name: Unannounced dungeon crawler

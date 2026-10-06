@@ -1,0 +1,30 @@
+---
+layout: default
+---
+{%- comment %} Post list. With `project: <slug>` in the page's front matter it
+shows only that project's posts; without it, every post. {% endcomment %}
+{%- if page.project %}
+  {%- assign posts = site.posts | where: "project", page.project %}
+{%- else %}
+  {%- assign posts = site.posts %}
+{%- endif %}
+<h1>Devlog</h1>
+<p class="eyebrow">Notes from the workbench at Mistvorn Games. <a href="/devlog/feed.xml">RSS</a></p>
+
+<p class="filters">
+  <a class="status{% unless page.project %} current{% endunless %}" href="/devlog/">All</a>
+  {%- for project in site.data.projects %}
+  <a class="status{% if page.project == project.slug %} current{% endif %}" href="/devlog/project/{{ project.slug }}/">{{ project.name }}</a>
+  {%- endfor %}
+</p>
+
+{%- for post in posts %}
+{%- assign project = site.data.projects | where: "slug", post.project | first %}
+<a class="card post-card" href="{{ post.url }}">
+  <h3>{{ post.title }}</h3>
+  <p class="meta">{{ post.date | date: "%-d %B %Y" }}{% if project %} &middot; {{ project.name }}{% endif %}</p>
+  <p>{{ post.excerpt | strip_html | normalize_whitespace | truncatewords: 40 }}</p>
+</a>
+{%- else %}
+<p>No posts yet &mdash; check back soon.</p>
+{%- endfor %}
