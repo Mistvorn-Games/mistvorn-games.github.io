@@ -370,6 +370,7 @@ a.card.post-card:hover {
 
 .social.reddit { --icon: url("/assets/img/reddit.svg"); }
 .social.instagram { --icon: url("/assets/img/instagram.svg"); }
+.social.discord { --icon: url("/assets/img/discord.svg"); }
 
 .hero .socials {
   justify-content: center;
