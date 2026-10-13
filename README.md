@@ -16,6 +16,9 @@ posts rendered through the layouts in `_layouts/`.
   - `privacy-policy.html`, `terms.html`
   - `img/` — banner (`banner.webp` for the page, `banner.png` for social
     previews) and app icon
+- `discord/` — `index.html` redirects `mistvorn.games/discord` to the
+  Discord server's invite link; if the invite is ever replaced, change the
+  three places the link appears in that file
 - `devlog/` — devlog index, plus one filtered index per project in
   `devlog/project/`
 - `_posts/` — published devlog posts; `_drafts/` — unpublished ones
