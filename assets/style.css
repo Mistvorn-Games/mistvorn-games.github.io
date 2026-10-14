@@ -381,3 +381,12 @@ a.card.post-card:hover {
 
 .hero .social { color: inherit; }
 .hero .social:hover { color: #ffffff; }
+
+/* A row of portrait screenshots in a post. */
+.post .shots {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.post .shots img, .post .shots video { flex: 1; min-width: 0; }
