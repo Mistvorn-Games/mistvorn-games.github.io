@@ -51,18 +51,10 @@ deploy. Update the `permalink:` when copying a page.
 
 ## Devlog visibility
 
-The devlog is currently **hidden**: its pages are committed but not built
-on the live site, and nothing links to it. `./serve.sh` still shows it
-locally. To launch it:
-
-1. Remove the `published: false` line from `devlog/index.html` and
-   `devlog/project/dungeon-crawler.html`.
-2. Add `<a href="/devlog/">Devlog</a>` before the Contact link in the nav of
-   `index.html` and the three `standfast/*.html` pages.
-
-Posts moved into `_posts/` are built even while the devlog is hidden (their
-URLs work, though nothing links to them), so keep them in `_drafts/` until
-launch.
+The devlog is live at `mistvorn.games/devlog/` and linked from the nav of
+`index.html` and the three `standfast/*.html` pages (the Jekyll layouts link
+it too). Keep unfinished posts in `_drafts/`: anything in `_posts/` is built
+and listed on the live site.
 
 ## Writing a devlog post
 
