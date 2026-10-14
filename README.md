@@ -43,6 +43,12 @@ guessable from the package name. Inside it:
 
 Then add one entry linking to `/<slug>/` from the root `index.html`.
 
+Every HTML page starts with front matter so Jekyll processes it: a
+`permalink:` that pins the page to its `.html` URL (without it, the site's
+pretty-URL setting would move `terms.html` to `terms/`), and a stylesheet
+link stamped with the build time so browsers fetch the new CSS after each
+deploy. Update the `permalink:` when copying a page.
+
 ## Devlog visibility
 
 The devlog is live at `mistvorn.games/devlog/` and linked from the nav of
