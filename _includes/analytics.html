@@ -1,0 +1,5 @@
+{%- comment %} Cloudflare Web Analytics. Only in production builds (GitHub Pages
+sets JEKYLL_ENV=production) so local previews aren't counted. {% endcomment %}
+{%- if jekyll.environment == "production" %}
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "82ec495742d8426785f5ab5fc80642b3"}'></script>
+{%- endif %}
